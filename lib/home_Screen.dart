@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         children: [
           const SizedBox(height: 30),
-          Text(
+          const Text(
             "🏡",
             style: TextStyle(fontSize: 70),
           ),
@@ -93,11 +92,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ShaderMask(
             shaderCallback: (Rect bounds) {
               return RadialGradient(
-                  center: Alignment.topLeft,
-                  radius: 1.5,
-                  colors: <Color>[Colors.yellow, Colors.deepOrange.shade900],
-                  tileMode: TileMode.mirror,
-                  stops: [0, 1]).createShader(bounds);
+                center: Alignment.topLeft,
+                radius: 1.5,
+                colors: <Color>[Colors.yellow, Colors.deepOrange.shade900],
+                tileMode: TileMode.mirror,
+                stops: const [0, 1],
+              ).createShader(bounds);
             },
             child: Text(
               widget.email, //? email
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                Icon(
+                const Icon(
                   Icons.logout_outlined,
                   color: Colors.white,
                 ),

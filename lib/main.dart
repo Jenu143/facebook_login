@@ -1,7 +1,6 @@
-import 'package:fb/home_Screen.dart';
+import 'package:fb/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 void main() {
   runApp(
@@ -88,27 +87,37 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
+        width: 250,
         padding: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           color: Colors.red,
           borderRadius: BorderRadius.circular(10),
           gradient: LinearGradient(
             colors: [
-              Colors.white.withOpacity(0.5),
+              Colors.white.withOpacity(0.45),
               Colors.white.withOpacity(0.04),
             ],
           ),
         ),
-        child: TextButton(
-          child: const Text(
-            "Login with Facebook",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              child: const Text(
+                "Login with Facebook",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+              onPressed: widget.press,
             ),
-          ),
-          onPressed: widget.press,
+            const Icon(
+              Icons.login_outlined,
+              color: Colors.white,
+            ),
+          ],
         ),
       ),
     );
