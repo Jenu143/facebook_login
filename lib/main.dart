@@ -39,8 +39,7 @@ class _MyAppState extends State<MyApp> {
         body: Container(
           child: _isLoggedIn
               ? HomeScreen(
-                  image:
-                      _userObj["picture"]["data"]["url"] ?? "Image not found!",
+                  image: _userObj["picture"]["data"]["ur l"] ?? "https://www.freeiconspng.com/thumbs/facebook-logo-png/facebook-splat-f-logo-transparent-28.png",
                   name: '${_userObj["name"] ?? "Name not found!"}',
                   email: '${_userObj["name"] ?? "Name not found!"}',
                   press: () {
