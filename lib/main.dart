@@ -5,7 +5,10 @@ import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 void main() {
   runApp(
-    const MaterialApp(home: MyApp()),
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyApp(),
+    ),
   );
 }
 
@@ -27,7 +30,10 @@ class _MyAppState extends State<MyApp> {
       child: Scaffold(
         backgroundColor: Colors.black.withOpacity(0.9),
         appBar: AppBar(
-          title: const Text("Facebook Login"),
+          title: const Text(
+            "Facebook Login",
+            style: TextStyle(fontSize: 16),
+          ),
           backgroundColor: Colors.black,
           centerTitle: true,
         ),
