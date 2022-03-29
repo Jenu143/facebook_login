@@ -113,6 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           // log out button
           Container(
+            width: 120,
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               color: Colors.red,
@@ -124,16 +125,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            child: TextButton(
-              onPressed: widget.press,
-              child: const Text(
-                "Logout",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
+            child: Row(
+              children: [
+                TextButton(
+                  onPressed: widget.press,
+                  child: const Text(
+                    "Logout",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
-              ),
+                Icon(
+                  Icons.logout_outlined,
+                  color: Colors.white,
+                ),
+              ],
             ),
           )
         ],
